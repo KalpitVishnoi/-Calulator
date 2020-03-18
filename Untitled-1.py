@@ -1,0 +1,15 @@
+from tkinter import *
+
+screen = Tk() 
+screen.title("% Calculator")
+selected = IntVar()
+var2 = StringVar()
+Label(screen, text = "Enter The Value Of Which You Want The %:").grid(row=0, column=1)
+Entry(screen, textvariable = var2).grid(row=1, column=1)
+rad1 = Radiobutton(screen,text='0.25%', value=1, variable=selected).grid(row=2, column=0)
+rad2 = Radiobutton(screen,text='5%', value=2, variable=selected).grid(row=2, column=1)
+rad3 = Radiobutton(screen,text='12%', value=3, variable=selected).grid(row=2, column=2)
+rad4 = Radiobutton(screen,text='18%', value=4, variable=selected).grid(row=2, column=3)
+rad5 = Radiobutton(screen,text='28%', value=5, variable=selected).grid(row=2, column=4)
+Button(text = "Calculate", height = "2", width = "30").grid(row=3, column=1)
+screen.mainloop()
